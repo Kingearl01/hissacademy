@@ -26,6 +26,7 @@ import {
   Facebook,
   Instagram,
   Twitter,
+  Youtube,
 } from "lucide-react"
 import Link from "next/link"
 
@@ -160,7 +161,7 @@ export default function ContactPage() {
                 <p className="text-sm text-muted-foreground">
                   <strong>General Inquiries:</strong>
                   <br />
-                  
+                  hissacademyfootballclub@gmail.com
                   <br />
                   {/* <strong>Registration:</strong>
                   <br />
@@ -335,18 +336,25 @@ export default function ContactPage() {
                 </CardHeader>
                 <CardContent>
                   <div className="flex gap-4">
+                    <Link href="https://www.facebook.com/hissacademyfootballclub" target="_blank" rel="noopener noreferrer">
                     <Button variant="outline" size="sm">
                       <Facebook className="h-4 w-4 mr-2" />
                       Facebook
                     </Button>
+                    </Link>
+                    <Link href="https://youtube.com/@hissacademyfootballclub" target="_blank" rel="noopener noreferrer">
                     <Button variant="outline" size="sm">
-                      <Instagram className="h-4 w-4 mr-2" />
-                      Instagram
+                      <Youtube className="h-4 w-4 mr-2" />
+                      Youtube
                     </Button>
-                    <Button variant="outline" size="sm">
-                      <Twitter className="h-4 w-4 mr-2" />
-                      Twitter
-                    </Button>
+                    </Link>
+                    
+                    <Link href="https://wa.me/233596084542" target="_blank" rel="noopener noreferrer">
+                      <Button variant="outline" size="sm">
+                        <Phone className="h-4 w-4 mr-2" />
+                        WhatsApp
+                      </Button>
+                    </Link>
                   </div>
                 </CardContent>
               </Card>
@@ -402,11 +410,11 @@ export default function ContactPage() {
               <div className="space-y-2">
                 <div className="flex items-center justify-center gap-2">
                   <Phone className="h-4 w-4 text-primary" />
-                  <span className="font-semibold">Emergency Hotline: +233 XX XXX XXXX</span>
+                  <span className="font-semibold">Emergency Hotline: +233 59 608 4542</span>
                 </div>
                 <div className="flex items-center justify-center gap-2">
                   <Mail className="h-4 w-4 text-primary" />
-                  <span>emergency@hissfc.com</span>
+                  <span>hissacademyfootballclub@gmail.com</span>
                 </div>
               </div>
               <Separator className="my-4" />

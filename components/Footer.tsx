@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MapPin, Phone, Mail } from "lucide-react";
+import { MapPin, Phone, Mail, Facebook, Youtube } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -74,6 +74,25 @@ export default function Footer() {
           </div>
 
           <div>
+            - <h4 className="font-semibold mb-4">Contact Info</h4>-{" "}
+            <div className="space-y-2 text-sm text-foreground">
+              -{" "}
+              <div className="flex items-center gap-2">
+                - <MapPin className="h-4 w-4" />-{" "}
+                <span>Nkawkaw, Abepotia, Ghana</span>-{" "}
+              </div>
+              -{" "}
+              <div className="flex items-center gap-2">
+                - <Phone className="h-4 w-4" />- <span>+233 XX XXX XXXX</span>-{" "}
+              </div>
+              -{" "}
+              <div className="flex items-center gap-2">
+                - <Mail className="h-4 w-4" />- <span>info@hissfc.com</span>-{" "}
+              </div>
+              -{" "}
+            </div>
+          </div>
+          <div>
             <h4 className="font-semibold mb-4">Contact Info</h4>
             <div className="space-y-2 text-sm text-foreground">
               <div className="flex items-center gap-2">
@@ -82,11 +101,43 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="h-4 w-4" />
-                <span>+233 XX XXX XXXX</span>
+                <span>+233 59 608 4542</span>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="h-4 w-4" />
-                <span>info@hissfc.com</span>
+                <span>hissacademyfootballclub@gmail.com</span>
+              </div>
+
+              <div className="mt-3 flex items-center gap-3">
+                <Link
+                  href="https://www.facebook.com/hissacademyfootballclub"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="HISS Academy on Facebook"
+                  className="hover:text-primary transition-colors"
+                >
+                  <Facebook className="h-5 w-5" />
+                </Link>
+
+                <Link
+                  href="https://youtube.com/@hissacademyfootballclub"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="HISS Academy on YouTube"
+                  className="hover:text-primary transition-colors"
+                >
+                  <Youtube className="h-5 w-5" />
+                </Link>
+
+                <Link
+                  href="https://wa.me/233596084542"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="HISS Academy on WhatsApp"
+                  className="hover:text-primary transition-colors"
+                >
+                  <Phone className="h-5 w-5" />
+                </Link>
               </div>
             </div>
           </div>
@@ -94,7 +145,12 @@ export default function Footer() {
 
         <div className="border-t border-muted/20 mt-8 pt-8 text-center text-sm text-foreground">
           <p>&copy; 2024 HISS Academy Football Club. All rights reserved.</p>
-          <p>Developed by<Link href="https://www.earlkalf.netlify.app">Earl Kalf Official</Link></p>
+          <p>
+            Developed by
+            <Link href="https://www.earlkalf.netlify.app">
+              Earl Kalf Official
+            </Link>
+          </p>
         </div>
       </div>
     </footer>
