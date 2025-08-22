@@ -22,9 +22,42 @@ const openSans = Open_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://hissacademy.netlify.app"),
   title: "HISS Academy - Nurturing Future Football Stars in Ghana",
   description:
     "HISS Football Club Academy in Nkawkaw Abepotia, Ghana - Developing young football talent aged 8-15 to become national and global assets in football.",
+  alternates: { canonical: "/" },
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#101010" },
+  ],
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, "max-video-preview": -1 },
+  },
+  openGraph: {
+    type: "website",
+    title: "HISS Academy - Nurturing Future Football Stars in Ghana",
+    description:
+      "HISS Football Club Academy in Nkawkaw Abepotia, Ghana - Developing young football talent aged 8-15.",
+    url: "https://hissacademy.netlify.app/",
+    images: [
+      {
+        url: "/og-image.png", // add this file to /public
+        width: 1200,
+        height: 630,
+        alt: "HISS Academy",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "HISS Academy - Nurturing Future Football Stars in Ghana",
+    description:
+      "HISS Football Club Academy in Nkawkaw Abepotia, Ghana - Developing young football talent aged 8-15.",
+    images: ["/og-image.png"],
+  },
   icons: {
     icon: [
       { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
@@ -36,7 +69,6 @@ export const metadata: Metadata = {
   },
   manifest: "/site.webmanifest",
 };
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -52,6 +84,26 @@ export default function RootLayout({
         <meta property="og:title" content="HISS Academy - Nurturing Future Football Stars in Ghana" />
         <meta property="og:description" content="HISS Football Club Academy in Nkawkaw Abepotia, Ghana - Developing young football talent aged 8-15 to become national and global assets in football." />
         {/* Add more meta tags as needed */}
+      
+       {/* Structured data for SEO / knowledge panel */}
+        <script
+          type="application/ld+json"
+          // eslint-disable-next-line react/no-danger
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "HISS Academy",
+              url: "https://hissacademy.netlify.app",
+              logo: "https://hissacademy.netlify.app/apple-touch-icon.png",
+              sameAs: [
+                "https://www.facebook.com/hissacademyfootballclub",
+                "https://youtube.com/@hissacademyfootballclub",
+                "https://wa.me/233596084542",
+              ],
+            }),
+          }}
+        />
       </head>
       <body>
         <ThemeProvider defaultTheme="dark" storageKey="hiss-ui-theme">

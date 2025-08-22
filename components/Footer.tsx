@@ -3,11 +3,11 @@ import { MapPin, Phone, Mail, Facebook, Youtube } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="text-foreground bg-backgound py-12">
+    <footer className="text-foreground bg-background py-12">
       <div className="px-4 lg:px-8 xl:px-12">
-        <div className="grid gap-8 md:grid-cols-4 max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
           <div>
-            <div className="flex items-center space-x-2 mb-4">
+            <div className="flex items-center space-x-3 mb-4">
               <div className="flex h-10 w-10 items-center justify-center rounded-full overflow-hidden">
                 <img
                   src="/hiss-logo.jpg"
@@ -20,43 +20,29 @@ export default function Footer() {
                 <p className="text-sm text-foreground">Football Club</p>
               </div>
             </div>
-            <p className="text-sm">
-              Nurturing young football talent in Ghana since 2020.
-            </p>
+            <p className="text-sm">Nurturing young football talent in Ghana since 2020.</p>
           </div>
 
           <div>
             <h4 className="font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2 text-sm text-muted">
+            <ul className="space-y-2 text-sm text-foreground">
               <li>
-                <Link
-                  href="/#about"
-                  className="hover:text-primary text-foreground transition-colors"
-                >
+                <Link href="/#about" className="hover:text-primary transition-colors">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/programs"
-                  className="hover:text-primary text-foreground transition-colors"
-                >
+                <Link href="/programs" className="hover:text-primary transition-colors">
                   Programs
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/gallery"
-                  className="hover:text-primary text-foreground transition-colors"
-                >
+                <Link href="/gallery" className="hover:text-primary transition-colors">
                   Gallery
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/blog"
-                  className="hover:text-primary text-foreground transition-colors"
-                >
+                <Link href="/blog" className="hover:text-primary transition-colors">
                   News & Updates
                 </Link>
               </li>
@@ -74,27 +60,8 @@ export default function Footer() {
           </div>
 
           <div>
-            - <h4 className="font-semibold mb-4">Contact Info</h4>-{" "}
-            <div className="space-y-2 text-sm text-foreground">
-              -{" "}
-              <div className="flex items-center gap-2">
-                - <MapPin className="h-4 w-4" />-{" "}
-                <span>Nkawkaw, Abepotia, Ghana</span>-{" "}
-              </div>
-              -{" "}
-              <div className="flex items-center gap-2">
-                - <Phone className="h-4 w-4" />- <span>+233 XX XXX XXXX</span>-{" "}
-              </div>
-              -{" "}
-              <div className="flex items-center gap-2">
-                - <Mail className="h-4 w-4" />- <span>info@hissfc.com</span>-{" "}
-              </div>
-              -{" "}
-            </div>
-          </div>
-          <div>
             <h4 className="font-semibold mb-4">Contact Info</h4>
-            <div className="space-y-2 text-sm text-foreground">
+            <div className="space-y-3 text-sm text-foreground">
               <div className="flex items-center gap-2">
                 <MapPin className="h-4 w-4" />
                 <span>Nkawkaw, Abepotia, Ghana</span>
@@ -109,7 +76,7 @@ export default function Footer() {
               </div>
 
               <div className="mt-3 flex items-center gap-3">
-                <Link
+                <a
                   href="https://www.facebook.com/hissacademyfootballclub"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -117,9 +84,9 @@ export default function Footer() {
                   className="hover:text-primary transition-colors"
                 >
                   <Facebook className="h-5 w-5" />
-                </Link>
+                </a>
 
-                <Link
+                <a
                   href="https://youtube.com/@hissacademyfootballclub"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -127,9 +94,9 @@ export default function Footer() {
                   className="hover:text-primary transition-colors"
                 >
                   <Youtube className="h-5 w-5" />
-                </Link>
+                </a>
 
-                <Link
+                <a
                   href="https://wa.me/233596084542"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -137,19 +104,24 @@ export default function Footer() {
                   className="hover:text-primary transition-colors"
                 >
                   <Phone className="h-5 w-5" />
-                </Link>
+                </a>
               </div>
             </div>
           </div>
         </div>
 
         <div className="border-t border-muted/20 mt-8 pt-8 text-center text-sm text-foreground">
-          <p>&copy; 2024 HISS Academy Football Club. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} HISS Academy Football Club. All rights reserved.</p>
           <p>
-            Developed by
-            <Link href="https://www.earlkalf.netlify.app">
+            Developed by{" "}
+            <a
+              href="https://www.earlkalf.netlify.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-primary transition-colors"
+            >
               Earl Kalf Official
-            </Link>
+            </a>
           </p>
         </div>
       </div>
