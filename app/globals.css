@@ -1,0 +1,163 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  /* Updated color tokens to match HISS Academy official logo colors with better light theme */
+  --background: oklch(1 0 0); /* #ffffff - Clean white background */
+  --foreground: oklch(0.278 0 0); /* #374151 - Dark gray for text */
+  --card: oklch(0.988 0.013 85.5); /* #fffbeb - Soft golden background for cards */
+  --card-foreground: oklch(0.278 0 0); /* #374151 - Text on cards */
+  --popover: oklch(1 0 0); /* #ffffff - Background for popovers */
+  --popover-foreground: oklch(0.278 0 0); /* #374151 - Text in popovers */
+  --primary: oklch(0.756 0.162 70.08); /* #f59e0b - Primary golden yellow from logo */
+  --primary-foreground: oklch(0.278 0 0); /* #374151 - Dark text on golden buttons */
+  --secondary: oklch(0.345 0.141 264.052); /* #1e3a8a - Secondary navy blue from logo */
+  --secondary-foreground: oklch(1 0 0); /* #ffffff - White text on navy buttons */
+  --muted: oklch(0.984 0.003 106.423); /* #f8fafc - Muted backgrounds */
+  --muted-foreground: oklch(0.545 0 0); /* #6b7280 - Muted text */
+  --accent: oklch(0.345 0.141 264.052); /* #1e3a8a - Accent navy blue for highlights */
+  --accent-foreground: oklch(1 0 0); /* #ffffff - White text on navy accents */
+  --destructive: oklch(0.567 0.226 27.325); /* #dc2626 - Errors or warnings */
+  --destructive-foreground: oklch(1 0 0); /* #ffffff - Text on destructive elements */
+  --border: oklch(0.922 0.003 106.423); /* #e5e7eb - Light borders */
+  --input: oklch(0.984 0.003 106.423); /* #f8fafc - Input fields */
+  --ring: oklch(0.756 0.162 70.08 / 0.5); /* Golden yellow with opacity for focus ring */
+  --chart-1: oklch(0.756 0.162 70.08); /* #f59e0b - Chart color 1 (golden) */
+  --chart-2: oklch(0.345 0.141 264.052); /* #1e3a8a - Chart color 2 (navy) */
+  --chart-3: oklch(0.627 0.265 303.9); /* #6366f1 - Chart color 3 */
+  --chart-4: oklch(0.769 0.188 142.5); /* #4ade80 - Chart color 4 */
+  --chart-5: oklch(0.828 0.189 84.429); /* #facc15 - Chart color 5 */
+  --radius: 0.5rem; /* Rounded corners for friendly appearance */
+  --sidebar: oklch(0.988 0.013 85.5); /* #fffbeb - Sidebar background */
+  --sidebar-foreground: oklch(0.278 0 0); /* #374151 - Text in sidebar */
+  --sidebar-primary: oklch(0.756 0.162 70.08); /* #f59e0b - Primary items in sidebar */
+  --sidebar-primary-foreground: oklch(0.278 0 0); /* #374151 - Text on primary sidebar items */
+  --sidebar-accent: oklch(0.345 0.141 264.052); /* #1e3a8a - Accent items in sidebar */
+  --sidebar-accent-foreground: oklch(1 0 0); /* #ffffff - Text on sidebar accent items */
+  --sidebar-border: oklch(0.922 0.003 106.423); /* #e5e7eb - Sidebar borders */
+  --sidebar-ring: oklch(0.756 0.162 70.08 / 0.5); /* Sidebar focus ring */
+}
+
+.dark {
+  /* Enhanced dark theme with HISS Academy brand colors */
+  --background: oklch(0.095 0 0); /* #1a1a1a - Very dark background */
+  --foreground: oklch(0.985 0 0); /* #fafafa - Light text */
+  --card: oklch(0.145 0 0); /* #262626 - Dark card background */
+  --card-foreground: oklch(0.985 0 0); /* #fafafa - Light text on cards */
+  --popover: oklch(0.145 0 0); /* #262626 - Dark popover background */
+  --popover-foreground: oklch(0.985 0 0); /* #fafafa - Light text in popovers */
+  --primary: oklch(0.756 0.162 70.08); /* #f59e0b - Keep golden yellow primary */
+  --primary-foreground: oklch(0.095 0 0); /* #1a1a1a - Dark text on golden buttons */
+  --secondary: oklch(0.445 0.141 264.052); /* #3b5998 - Lighter navy for dark theme */
+  --secondary-foreground: oklch(1 0 0); /* #ffffff - White text on navy buttons */
+  --muted: oklch(0.195 0 0); /* #333333 - Muted dark backgrounds */
+  --muted-foreground: oklch(0.708 0 0); /* #a3a3a3 - Muted light text */
+  --accent: oklch(0.445 0.141 264.052); /* #3b5998 - Lighter navy accent */
+  --accent-foreground: oklch(1 0 0); /* #ffffff - White text on accents */
+  --destructive: oklch(0.567 0.226 27.325); /* #dc2626 - Keep red for errors */
+  --destructive-foreground: oklch(1 0 0); /* #ffffff - White text on destructive */
+  --border: oklch(0.245 0 0); /* #404040 - Dark borders */
+  --input: oklch(0.195 0 0); /* #333333 - Dark input fields */
+  --ring: oklch(0.756 0.162 70.08 / 0.5); /* Golden focus ring */
+  --chart-1: oklch(0.756 0.162 70.08); /* Golden chart color */
+  --chart-2: oklch(0.445 0.141 264.052); /* Navy chart color */
+  --chart-3: oklch(0.627 0.265 303.9); /* Purple chart color */
+  --chart-4: oklch(0.769 0.188 142.5); /* Green chart color */
+  --chart-5: oklch(0.828 0.189 84.429); /* Yellow chart color */
+  --sidebar: oklch(0.145 0 0); /* #262626 - Dark sidebar */
+  --sidebar-foreground: oklch(0.985 0 0); /* #fafafa - Light sidebar text */
+  --sidebar-primary: oklch(0.756 0.162 70.08); /* Golden sidebar primary */
+  --sidebar-primary-foreground: oklch(0.095 0 0); /* Dark text on golden */
+  --sidebar-accent: oklch(0.445 0.141 264.052); /* Navy sidebar accent */
+  --sidebar-accent-foreground: oklch(1 0 0); /* White text on navy */
+  --sidebar-border: oklch(0.245 0 0); /* #404040 - Dark sidebar borders */
+  --sidebar-ring: oklch(0.756 0.162 70.08 / 0.5); /* Golden sidebar focus ring */
+}
+
+.green {
+  --primary: oklch(0.647 0.188 142.5); /* #22c55e - Forest green primary */
+  --primary-foreground: oklch(1 0 0); /* White text on green */
+  --secondary: oklch(0.345 0.141 264.052); /* Keep navy blue secondary */
+  --secondary-foreground: oklch(1 0 0);
+  --accent: oklch(0.647 0.188 142.5); /* Green accent */
+  --accent-foreground: oklch(1 0 0);
+  --chart-1: oklch(0.647 0.188 142.5); /* Green chart colors */
+  --chart-2: oklch(0.345 0.141 264.052);
+}
+
+.blue {
+  --primary: oklch(0.567 0.226 264.052); /* #3b82f6 - Ocean blue primary */
+  --primary-foreground: oklch(1 0 0); /* White text on blue */
+  --secondary: oklch(0.756 0.162 70.08); /* Keep golden yellow secondary */
+  --secondary-foreground: oklch(0.278 0 0);
+  --accent: oklch(0.567 0.226 264.052); /* Blue accent */
+  --accent-foreground: oklch(1 0 0);
+  --chart-1: oklch(0.567 0.226 264.052); /* Blue chart colors */
+  --chart-2: oklch(0.756 0.162 70.08);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Added custom font family variables for Work Sans and Open Sans */
+  --font-sans: var(--font-open-sans);
+  --font-heading: var(--font-work-sans);
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  /* Added heading styles using Work Sans */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+  }
+}
