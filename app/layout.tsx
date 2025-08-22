@@ -25,7 +25,16 @@ export const metadata: Metadata = {
   title: "HISS Academy - Nurturing Future Football Stars in Ghana",
   description:
     "HISS Football Club Academy in Nkawkaw Abepotia, Ghana - Developing young football talent aged 8-15 to become national and global assets in football.",
-  generator: "v0.app",
+  icons: {
+    icon: [
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      "/favicon.ico",
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
+  manifest: "/site.webmanifest",
 };
 
 export default function RootLayout({
@@ -38,6 +47,12 @@ export default function RootLayout({
       lang="en"
       className={`${workSans.variable} ${openSans.variable} antialiased`}
     >
+          <head>
+        <meta name="theme-color" content="#101010" />
+        <meta property="og:title" content="HISS Academy - Nurturing Future Football Stars in Ghana" />
+        <meta property="og:description" content="HISS Football Club Academy in Nkawkaw Abepotia, Ghana - Developing young football talent aged 8-15 to become national and global assets in football." />
+        {/* Add more meta tags as needed */}
+      </head>
       <body>
         <ThemeProvider defaultTheme="dark" storageKey="hiss-ui-theme">
           <main className="min-h-screen bg-background">
