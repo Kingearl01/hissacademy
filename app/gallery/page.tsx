@@ -308,76 +308,7 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-foreground text-background py-12">
-        <div className="w-full px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-8 md:grid-cols-4">
-            <div>
-              <Link href="/" className="flex items-center space-x-2 mb-4">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary">
-                  <span className="text-lg font-bold text-primary-foreground">H</span>
-                </div>
-                <div>
-                  <h3 className="text-lg font-bold">HISS FC</h3>
-                  <p className="text-sm text-muted">Football Academy</p>
-                </div>
-              </Link>
-              <p className="text-sm text-muted">Nurturing young football talent in Ghana since 2016.</p>
-            </div>
-
-            <div>
-              <h4 className="font-semibold mb-4">Quick Links</h4>
-              <ul className="space-y-2 text-sm text-muted">
-                <li>
-                  <Link href="/" className="hover:text-primary transition-colors">
-                    Home
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/programs" className="hover:text-primary transition-colors">
-                    Programs
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/gallery" className="hover:text-primary transition-colors">
-                    Gallery
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/blog" className="hover:text-primary transition-colors">
-                    News & Updates
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-semibold mb-4">Gallery</h4>
-              <ul className="space-y-2 text-sm text-muted">
-                <li>Training Sessions</li>
-                <li>Academy Events</li>
-                <li>Facilities Tour</li>
-                <li>Success Stories</li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-semibold mb-4">Contact Info</h4>
-              <div className="space-y-2 text-sm text-muted">
-                <div className="flex items-center gap-2">
-                  <MapPin className="h-4 w-4" />
-                  <span>Nkawkaw, Abepotia, Ghana</span>
-                </div>
-                <div>+233 XX XXX XXXX</div>
-              </div>
-            </div>
-          </div>
-
-          <div className="border-t border-muted/20 mt-8 pt-8 text-center text-sm text-muted">
-            <p>&copy; 2024 HISS Football Club Academy. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+   
     </div>
   )
 }
